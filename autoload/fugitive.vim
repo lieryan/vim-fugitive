@@ -5643,15 +5643,15 @@ function! fugitive#MapJumps(...) abort
 
     nnoremap <buffer>       r<Space> :Git rebase<Space>
     nnoremap <buffer>          r<CR> :Git rebase<CR>
-    nnoremap <buffer> <silent> ri    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><CR>
-    nnoremap <buffer> <silent> rf    :<C-U>Grebase --autosquash<C-R>=<SID>RebaseArgument()<CR><CR>
-    nnoremap <buffer> <silent> ru    :<C-U>Grebase --interactive @{upstream}<CR>
-    nnoremap <buffer> <silent> rp    :<C-U>Grebase --interactive @{push}<CR>
-    nnoremap <buffer> <silent> rw    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/reword/e<CR>
-    nnoremap <buffer> <silent> rm    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/edit/e<CR>
-    nnoremap <buffer> <silent> rd    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
-    nnoremap <buffer> <silent> rk    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
-    nnoremap <buffer> <silent> rx    :<C-U>Grebase --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
+    nnoremap <buffer> <silent> ri    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><CR>
+    nnoremap <buffer> <silent> rf    :<C-U>Grebase --autostash --autosquash<C-R>=<SID>RebaseArgument()<CR><CR>
+    nnoremap <buffer> <silent> ru    :<C-U>Grebase --autostash --interactive @{upstream}<CR>
+    nnoremap <buffer> <silent> rp    :<C-U>Grebase --autostash --interactive @{push}<CR>
+    nnoremap <buffer> <silent> rw    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/reword/e<CR>
+    nnoremap <buffer> <silent> rm    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/edit/e<CR>
+    nnoremap <buffer> <silent> rd    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
+    nnoremap <buffer> <silent> rk    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
+    nnoremap <buffer> <silent> rx    :<C-U>Grebase --autostash --interactive<C-R>=<SID>RebaseArgument()<CR><Bar>s/^pick/drop/e<CR>
     nnoremap <buffer> <silent> rr    :<C-U>Grebase --continue<CR>
     nnoremap <buffer> <silent> rs    :<C-U>Grebase --skip<CR>
     nnoremap <buffer> <silent> re    :<C-U>Grebase --edit-todo<CR>
